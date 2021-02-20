@@ -42,6 +42,10 @@ def send_msg(msg, recipient):
     )
 
 
+@app.route('/')
+def index():
+  return "<h1>Welcome to Stocks bot</h1>"
+
 @app.route("/webhook", methods=["POST"])
 def webhook():
     f = request.form
